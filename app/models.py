@@ -17,8 +17,8 @@ class Application(Base):
     id = Column(Integer, primary_key=True, index=True)
     company = Column(String(255), nullable=False)
     role = Column(String(255), nullable=False)
-    status = Column(String(50), nullable=False, default="Applied")  # Applied/Interview/Offer/Rejected
+    status = Column(String(50), nullable=False, default="Applied")  
     link = Column(String(500), nullable=True)
     notes = Column(Text, nullable=True)
-    applied_date = Column(String(20), nullable=True)  # keep simple (e.g., 2026-03-04)
+    applied_date = Column(String(20), nullable=True) 
     created_at = Column(DateTime(timezone=True), server_default=func.now())
